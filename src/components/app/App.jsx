@@ -1,46 +1,45 @@
 import { useState } from "react";
-import Random from "../random_pidor/random";
+// import Random from "../random";
 import CangerAbuse from "../button/button";
-import Binding from "../binding/binding";
+// import Binding from "../binding";
+import AddForm from "../form";
 
 import styled from "styled-components";
+import "./App.module.css";
 
 const Greetings = styled.div`
   padding: 4em 0;
   background: papayawhip;
   text-align: center;
   color: palevioletred;
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 3em;
-  }
-  h3 {
-    font-size: 3.3em;
-    color: #506e43;
-    font-weight: 700;
-  }
-  input {
-    width: 50%;
-    font-size: 1.5em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid palevioletred;
-    border-radius: 3px;
-  }
 `;
 
-function App({ subTitle }) {
-  const [greet, changeGreet] = useState("Stranger");
+function App() {
+  let [count, setCount] = useState(1);
+  const [array, setPost] = useState([
+    { id: "qw", text: "first" },
+    { id: "er", text: "second" },
+    { id: "ty", text: "third" },
+  ]);
+
+  const createPost = (newItem) => {
+    setPost([...array, newItem]);
+  };
+  const removePost = (post) => {
+    setPost(array.filter((elem) => elem.id !== post));
+  };
+
+  // const ChangeAbuse = () => {
+  //   setCount(++count);
+  // };
 
   return (
     <Greetings>
-      <h1>🤡 HI, {greet} 🤡</h1>
-      <h2>{subTitle}</h2>
-      <Random />
-      <CangerAbuse />
-      <Binding />
+      <h1>🤡 {count} 🤡</h1>
+      <AddForm content={array} create={createPost} event={removePost} />
+      {/* <Random count={count} /> */}
+      {/* <CangerAbuse event={ChangeAbuse}>Change my name</CangerAbuse> */}
+      {/* <Binding /> */}
     </Greetings>
   );
 }

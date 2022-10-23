@@ -7,6 +7,6 @@ import App from './components/app/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App subTitle="I affirm that you:" />);
+root.render(<App />);
 
 

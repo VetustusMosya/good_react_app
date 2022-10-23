@@ -1,8 +1,8 @@
 // import
 
 function Random() {
-  let randomInt = Math.floor(Math.random() * 4);
-  if (randomInt !== localStorage.getItem("int")) {
+  let randomInt = Math.floor(Math.random() * 4) + 1;
+  if (randomInt !== +localStorage.getItem("int")) {
     localStorage.setItem("int", randomInt);
     return randomInt;
   } else {
@@ -10,8 +10,9 @@ function Random() {
   }
 }
 
-function RenderAbuse() {
+function RenderAbuse(count) {
   let randomText = "";
+  console.log(typeof Random());
   switch (Random()) {
     case 1:
       randomText = "PIDOR";
@@ -26,7 +27,8 @@ function RenderAbuse() {
       randomText = "SHIT";
       break;
     default:
-      randomText = "NOTHING";
+      randomText = "nothing";
+      break;
   }
   return <h3>{randomText}</h3>;
 }

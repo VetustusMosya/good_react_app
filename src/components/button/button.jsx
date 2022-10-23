@@ -1,21 +1,9 @@
-import styled from "styled-components";
+import classes from "./button.module.css";
 
-const Button = styled.button`
-  background: palevioletred;
-  color: white;
-  font-size: 1.5em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-`;
-
-export default function CangerAbuse(Change) {
+export default function Button(props) {
   return (
-    <Button
-    //  onClick={}
-    >
-      I want change
-    </Button>
+    <button onClick={() => props.event(props.id)} className={classes.myBtn}>
+      {props.children}
+    </button>
   );
 }
