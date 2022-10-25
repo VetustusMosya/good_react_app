@@ -12,9 +12,24 @@ body {
   display: flex;
   justify-content: center;
   padding: 4em 0;
+  font-size: calc(100vw / 800 * 10);
+}
+
+@media screen and (max-width: 768.01px) {
+  #root {
+    font-size: calc(100vw / 350 * 10);
+  }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1,
+h2,
+h3,
+p {
+  cursor: default;
+  margin: 0;
 }
