@@ -6,17 +6,21 @@ export default function AddForm({ content, create, event }) {
 
   const addNewPost = (e) => {
     e.preventDefault();
-    const newItem = {
-      id: Date.now(),
-      text: inpact.current.value,
-    };
-    create(newItem);
-    inpact.current.value = "";
+    if (inpact.current.value === "") {
+      alert("Пустая строка");
+    } else {
+      const newItem = {
+        id: Date.now(),
+        text: inpact.current.value,
+      };
+      create(newItem);
+      inpact.current.value = "";
+    }
   };
 
   return (
     <form>
-      <input ref={inpact} type="text" placeholder="write shit" />
+      <input ref={inpact} required type="text" placeholder="write shit" />
       <input onClick={addNewPost} type="button" value="Put it" />
       <ul>
         {content.map((post) => (

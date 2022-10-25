@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import Random from "../random";
+import Random from "../random";
 import CangerAbuse from "../button/button";
 // import Binding from "../binding";
 import AddForm from "../form";
@@ -21,6 +21,7 @@ function App() {
     { id: "er", text: "second" },
     { id: "ty", text: "third" },
   ]);
+  const [enaf, changeEnaf] = useState();
 
   const createPost = (newItem) => {
     setPost([...array, newItem]);
@@ -29,16 +30,16 @@ function App() {
     setPost(array.filter((elem) => elem.id !== post));
   };
 
-  // const ChangeAbuse = () => {
-  //   setCount(++count);
-  // };
+  const ChangeAbuse = () => {
+    setCount(++count);
+  };
 
   return (
     <Greetings>
-      <h1>🤡 {count} 🤡</h1>
-      <AddForm content={array} create={createPost} event={removePost} />
-      {/* <Random count={count} /> */}
-      {/* <CangerAbuse event={ChangeAbuse}>Change my name</CangerAbuse> */}
+      <h1>🤡 U are: 🤡</h1>
+      {/* <AddForm content={array} create={createPost} event={removePost} /> */}
+      <Random count={count} />
+      <CangerAbuse event={ChangeAbuse}>Change my name</CangerAbuse>
       {/* <Binding /> */}
     </Greetings>
   );

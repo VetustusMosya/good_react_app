@@ -6,31 +6,35 @@ function Random() {
     localStorage.setItem("int", randomInt);
     return randomInt;
   } else {
-    Random();
+    localStorage.setItem("int", randomInt);
+    return Random();
   }
 }
 
-function RenderAbuse(count) {
+export default function RenderAbuse({ count }) {
   let randomText = "";
-  console.log(typeof Random());
+  if (count >= 4) {
+    randomText = "hui ";
+  }
   switch (Random()) {
+    case 0:
+      randomText += "nothing";
+      break;
     case 1:
-      randomText = "PIDOR";
+      randomText += "PIDOR";
       break;
     case 2:
-      randomText = "ASSHOLE";
+      randomText += "ASSHOLE";
       break;
     case 3:
-      randomText = "GAY";
+      randomText += "GAY";
       break;
     case 4:
-      randomText = "SHIT";
+      randomText += "SHIT";
       break;
     default:
-      randomText = "nothing";
+      randomText += "broke";
       break;
   }
   return <h3>{randomText}</h3>;
 }
-
-export default RenderAbuse;
