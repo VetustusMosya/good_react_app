@@ -1,8 +1,16 @@
 button {
   background: palevioletred;
   color: white;
-  padding: 0.25em 1em;
-  font-size: 0.8em;
+  margin-top: 0.7em;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  font-weight: 700;
   border: none;
   border-radius: 3px;
+  background: linear-gradient(145deg, #bc5276, #e0618c);
+  box-shadow: 20px 20px 60px #d9cbb5, -20px -20px 60px #fffff5;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #9c3a5b, #e0618c);
 }

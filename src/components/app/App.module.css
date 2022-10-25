@@ -1,36 +1,24 @@
+.app {
+  width: max-content;
+  padding: 4em;
+  color: palevioletred;
+  text-align: center;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e6d7c0, #ffffe4);
+  box-shadow: 20px 20px 60px #d9cbb5, -20px -20px 60px #fffff5;
+}
 h1 {
   font-size: 4em;
-}
-h2 {
-  font-size: 3em;
-}
-h3 {
-  font-size: 3.3em;
-  color: #506e43;
   font-weight: 700;
 }
-input {
-  width: 30%;
-  font-size: 1.5em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
+h2 {
+  font-size: 3.5em;
 }
-input[type="button"] {
-  width: 150px;
-  background-color: white;
+h3 {
+  font-size: 4em;
+  color: #607196;
+  font-weight: 700;
 }
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-li {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  padding: 1rem 0;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: 600;
+p {
+  color: #607196;
 }

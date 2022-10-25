@@ -1,19 +1,6 @@
-// import
-
-function Random() {
-  let randomInt = Math.floor(Math.random() * 4) + 1;
-  if (randomInt !== +localStorage.getItem("int")) {
-    localStorage.setItem("int", randomInt);
-    return randomInt;
-  } else {
-    localStorage.setItem("int", randomInt);
-    return Random();
-  }
-}
-
-export default function RenderAbuse() {
+export default function RenderAbuse({ num }) {
   let randomText = "";
-  switch (Random()) {
+  switch (num) {
     case 0:
       randomText += "nothing";
       break;
