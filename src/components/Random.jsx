@@ -9,7 +9,6 @@ function childRandom(length) {
     localStorage.setItem("int", randomInt);
     return randomInt;
   } else {
-    console.log("false");
     return childRandom(length);
   }
 }
