@@ -7,9 +7,7 @@ import styles from "./App.module.css";
 
 export default function App({ arrAbuse }) {
   let [count, setCount] = useState(1);
-  let [num, changeNum] = useState(
-    +localStorage.getItem("int") || Random(arrAbuse.length)
-  );
+  let [num, changeNum] = useState(+localStorage.getItem("int") || 0);
 
   const ChangeAbuse = () => {
     setCount(++count);
