@@ -21,7 +21,7 @@ export default function App({ arrAbuse }) {
     <div className={styles.app}>
       <h1>Today u are</h1>
       <RenderAbuse arrAbuse={arrAbuse} num={num} />
-      <CheckRender ChangeAbuse={ChangeAbuse} />
+      <CheckRender ChangeAbuse={ChangeAbuse} count={count} />
     </div>
   );
 }
